@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'homes#top'
   #その後deviseを追加したため上記の修正
+  # 下記に名前付きルートを設定
+  get 'homes/about', to: 'homes#about', as: 'about'
+  
 end
