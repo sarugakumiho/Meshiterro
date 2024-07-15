@@ -15,8 +15,10 @@ Rails.application.routes.draw do
   # get 'post_images/show'
   # post_imagesコントローラ作成時に上記が自動的に追加されるため、
   # 上記は削除し、以下のとおり修正
-  resources :post_images, only: [:new, :create, :index, :show, :destroy]
-  # さらに上記のとおりcreateとdestroyを追加
+  resources :post_images, only: [:new, :create, :index, :show, :destroy] do
+    resource :favorite, only: [:create, :destroy]
+    resources :post_comments, only: [:create, :destroy]
+  end
   
   # get 'users/show'
   # get 'users/edit'
