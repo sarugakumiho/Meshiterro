@@ -16,9 +16,9 @@ class PostImagesController < ApplicationController
   
   
   def index
-    @post_images = PostImage.all
+    @post_images = PostImage.page(params[:page])
   end
-  # 上記追加
+  # 上記追加　修正
 
   def show
     @post_image = PostImage.find(params[:id])

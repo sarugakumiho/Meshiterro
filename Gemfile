@@ -56,4 +56,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
-# ユーザー認証機能作成のため上記（追記）
+# ユーザー認証機能作成のため上記追記
+gem 'kaminari','~> 1.2.1'
+#　Kaminari設定のため上記追記
